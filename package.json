@@ -13,6 +13,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy-production": "react-scripts build && scp -r ./build/* skulsta@164.90.228.10:/var/www/brreg.io/html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
