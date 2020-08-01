@@ -1,12 +1,11 @@
 import React from "react";
-import axios from "axios";
 import classes from "./Search.module.scss";
 
 const Search = () => {
   return (
     <form className={classes.Form}>
-      <input type="text" placeholder="Bedrift AS" />
-      <input type="submit" value="Søk" />
+      <input type="text" label="Søk etter bedrift" placeholder="Bedrift AS" />
+      <input type="submit" label="Utfør søk" value="Søk" />
     </form>
   );
 };
