@@ -1,6 +1,9 @@
 .Table {
   max-width: 66ch;
-  background-color: lightgray;
   margin: 2rem auto;
   min-height: 80vh;
+  border: none;
+  background: hsl(0, 0%, 93%);
+  border-radius: .25rem;
+  padding: .75rem 1rem;
 }
