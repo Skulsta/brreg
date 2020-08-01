@@ -1,34 +1,24 @@
 import React from "react";
-import "./Search.scss";
+import axios from "axios";
+import classes from "./Search.module.scss";
 
-class Search extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      query: "",
-      results: {},
-      loading: false,
-      message: "",
-    };
-  }
+const Search = () => {
+  return (
+    <React.Fragment>
+      <h2 className={classes.header + " b"}>
+        Søk etter bedriftsnavn eller organisasjonsnummer
+      </h2>
+      <label className={classes.search_label} htmlFor="search-input">
+        <input
+          type="text"
+          name="query"
+          id="search-input"
+          placeholder="Bedrift AS"
+        />
+        <i className="fa fa-search search-icon" aria-hidden="true" />
+      </label>
+    </React.Fragment>
+  );
+};
 
-  render() {
-    return (
-      <div className="container">
-        {/*Heading*/}
-        <h2 className="heading">Live Search: React Application</h2>
-        {/*Search Input*/}
-        <label className="search-label" htmlFor="search-input">
-          <input
-            type="text"
-            value=""
-            id="search-input"
-            placeholder="Search..."
-          />
-          <i className="fa fa-search search-icon" />
-        </label>
-      </div>
-    );
-  }
-}
 export default Search;
