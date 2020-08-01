@@ -3,7 +3,9 @@ $secondary: orange;
 
 body {
   min-height: 100vh;
-  display: grid;
+  display: flex;
+  margin: 2rem;
+  justify-content: center;
 }
 
 h1, h2, h3, h4, h5, h6 {

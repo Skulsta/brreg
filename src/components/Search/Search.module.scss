@@ -1,11 +1,8 @@
 .Form {
-  margin-top: .5rem;
   display: flex;
-  justify-content: center;
 
   input {
     flex: 0.5 10ch;
-    margin: .5rem;
     font-size: 1rem;
 
   &:focus {
@@ -14,6 +11,7 @@
 
   &[type="text"] {
       flex: 1 20ch;
+      margin-right: .5rem;
     }
   }
 }
