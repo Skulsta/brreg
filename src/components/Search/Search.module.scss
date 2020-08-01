@@ -16,6 +16,10 @@
       flex: 1 20ch;
       margin-right: .5rem;
     }
+
+    &[type="submit"] {
+      outline-color: white;
+    }
   }
 }
 

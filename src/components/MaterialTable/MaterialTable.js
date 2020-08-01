@@ -10,7 +10,6 @@ import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles({
   table: {
-    marginTop: "2rem",
     // minWidth: 650,
   },
 });
