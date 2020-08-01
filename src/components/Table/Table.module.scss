@@ -1,9 +1,14 @@
 .Table {
+  display: flex;
+  width: 100%;
   max-width: 66ch;
+  height: 85vh;
   margin: 2rem auto;
-  min-height: 80vh;
   border: none;
   background: hsl(0, 0%, 93%);
   border-radius: .25rem;
   padding: .75rem 1rem;
+  box-sizing: border-box;
+  justify-content: center;
+  padding-top: 20vh;
 }
