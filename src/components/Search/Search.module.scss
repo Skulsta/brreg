@@ -39,6 +39,10 @@
     flex: 1 1 10ch;
     margin: .5rem;
 
+    &:focus {
+      outline-color: white;
+    }
+
     &[type="text"] {
       flex: 3 1 30ch;
     }
