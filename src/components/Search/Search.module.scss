@@ -32,7 +32,7 @@ input {
 
 @media (min-width: 768px) {
 .Form {
-  width: 60%;
+  max-width: 50ch;
   margin: .5rem auto;
   }
 }
