@@ -11,25 +11,26 @@ const CompanyTable = (props) => {
           <Table>
             <thead>
               <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
+                <th>Navn</th>
+                <th>Orgnr.</th>
+                <th>Sted</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>Bedrift AS</td>
+                <td>871168172</td>
+                <td>Oslo</td>
               </tr>
               <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <td>Bedrift AS</td>
+                <td>871168172</td>
+                <td>Oslo</td>
               </tr>
               <tr>
-                <td colSpan="2">Larry the Bird</td>
-                <td>@twitter</td>
+                <td>Bedrift AS</td>
+                <td>871168172 </td>
+                <td>Oslo</td>
               </tr>
             </tbody>
           </Table>
