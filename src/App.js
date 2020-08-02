@@ -1,17 +1,17 @@
 import React from "react";
-import "./App.scss";
+import Container from "react-bootstrap/Container";
+import Jumbotron from "react-bootstrap/Jumbotron";
 
-import Search from "./components/Search/Search";
-import Table from "./components/Table/Table";
-import MaterialTable from "./components/MaterialTable/MaterialTable";
+import "./stylesheets/styles.scss";
 
 class App extends React.Component {
   render() {
     return (
-      <React.Fragment>
-        <Search />
-        <MaterialTable />
-      </React.Fragment>
+      <Container className="p-3">
+        <Jumbotron>
+          <h1 className="header">Some Header</h1>
+        </Jumbotron>
+      </Container>
     );
   }
 }

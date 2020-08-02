@@ -1,0 +1,10 @@
+@import "variables.scss";
+@import "~bootstrap/scss/bootstrap";
+
+h1, h2 {
+  color: $primaryColor;
+}
+
+.header {
+  text-align: center;
+}
