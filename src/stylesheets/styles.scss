@@ -2,6 +2,10 @@
 @import "tables.scss";
 @import "~bootstrap/scss/bootstrap";
 
+body {
+  margin: 2rem;
+}
+
 h1, h2 {
   color: $primaryColor;
 }

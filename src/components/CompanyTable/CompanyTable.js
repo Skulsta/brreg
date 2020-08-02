@@ -1,36 +1,12 @@
 import React, { useState } from "react";
 import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
 import Fade from "react-bootstrap/Fade";
-import Form from "react-bootstrap/Form";
-import Col from "react-bootstrap/Col";
+import Jumbotron from "react-bootstrap/Jumbotron";
 
-const CompanyTable = () => {
-  const [open, setOpen] = useState(false);
-
+const CompanyTable = (props) => {
   return (
-    <>
-      <Form className="d-flex justify-content-center">
-        <Form.Row>
-          <Col className="my-1">
-            <Form.Label htmlFor="inlineFormInputName" srOnly>
-              Name
-            </Form.Label>
-            <Form.Control id="inlineFormInputName" placeholder="Jane Doe" />
-          </Col>
-          <Col xs="auto" className="my-1">
-            <Button
-              onClick={() => setOpen(!open)}
-              aria-controls="example-collapse-text"
-              aria-expanded={open}
-            >
-              click
-            </Button>
-          </Col>
-        </Form.Row>
-      </Form>
-
-      <Fade in={open} id="example-collapse-text">
+    <Jumbotron className="bg-white">
+      <Fade in={props.open} id="example-collapse-text">
         <div className="shadow p-3 mb-5 bg-white rounded">
           <Table>
             <thead>
@@ -59,7 +35,7 @@ const CompanyTable = () => {
           </Table>
         </div>
       </Fade>
-    </>
+    </Jumbotron>
   );
 };
 
