@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Container from "react-bootstrap/Container";
 import CompanyTable from "./components/CompanyTable/CompanyTable";
 import SearchForm from "./components/SearchForm/SearchForm";
 
@@ -9,10 +8,10 @@ const App = () => {
   const [open, setOpen] = useState(true);
 
   return (
-    <Container>
+    <div className="Layout">
       <SearchForm setOpen={() => setOpen(!open)} />
       <CompanyTable open={open} />
-    </Container>
+    </div>
   );
 };
 

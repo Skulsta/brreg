@@ -1,5 +1,4 @@
 import React from "react";
-import Table from "react-bootstrap/Table";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Fade from "react-bootstrap/Fade";
@@ -9,35 +8,9 @@ import classes from "./CompanyTable.module.scss";
 
 const CompanyTable = (props) => {
   return (
-    <Jumbotron className={classes.Table + " bg-white"}>
+    <Jumbotron fluid="md" className={classes.Table + " bg-white"}>
       <Fade in={props.open} id="example-collapse-text">
-        <div className="shadow p-3 mb-5 bg-white rounded">
-          <Table>
-            <thead>
-              <tr>
-                <th>Navn</th>
-                <th>Orgnr.</th>
-                <th>Sted</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Bedrift AS</td>
-                <td>871168172</td>
-                <td>Oslo</td>
-              </tr>
-              <tr>
-                <td>Bedrift AS</td>
-                <td>871168172</td>
-                <td>Oslo</td>
-              </tr>
-              <tr>
-                <td>Bedrift AS</td>
-                <td>871168172 </td>
-                <td>Oslo</td>
-              </tr>
-            </tbody>
-          </Table>
+        <div className={classes.TableContent + " shadow p-3 rounded"}>
           <ListGroup variant="flush">
             <ListGroup.Item>
               <Row>
@@ -48,7 +21,7 @@ const CompanyTable = (props) => {
                   <p class="font-weight-bold">Orgnr.</p>
                 </Col>
                 <Col>
-                  <p class="font-weight-bold">Postnr. / Sted</p>
+                  <p class="font-weight-bold">Sted</p>
                 </Col>
               </Row>
             </ListGroup.Item>
