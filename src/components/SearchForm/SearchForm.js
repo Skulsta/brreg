@@ -9,7 +9,12 @@ const SearchForm = (props) => {
     <Container
       className={classes.Form + " d-flex flex-row jusify-content-between"}
     >
-      <Form.Control className="mr-2" placeholder="Bedrift AS" size="lg" />
+      <Form.Control
+        autoFocus
+        className={classes.SearchField + " mr-2"}
+        placeholder="Bedrift AS"
+        size="lg"
+      />
       <Button
         onClick={() => props.setOpen(true)}
         // aria-controls="example-collapse-text"
