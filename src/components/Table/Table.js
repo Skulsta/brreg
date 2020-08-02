@@ -10,9 +10,9 @@ const CompanyTable = () => {
 
   return (
     <>
-      <Form>
-        <Form.Row className="align-items-center">
-          <Col sm={2} className="my-1">
+      <Form className="d-flex justify-content-center">
+        <Form.Row>
+          <Col className="my-1">
             <Form.Label htmlFor="inlineFormInputName" srOnly>
               Name
             </Form.Label>
