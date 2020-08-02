@@ -9,7 +9,7 @@ import classes from "./CompanyTable.module.scss";
 const CompanyTable = (props) => {
   return (
     <Jumbotron fluid="md" className={classes.Table + " bg-white"}>
-      <Fade in={props.open} id="example-collapse-text">
+      <Fade in={props.open}>
         <div className={classes.TableContent + " shadow p-3 rounded"}>
           <ListGroup variant="flush">
             <ListGroup.Item>

@@ -5,24 +5,27 @@ import Container from "react-bootstrap/Container";
 import classes from "./SearchForm.module.scss";
 
 const SearchForm = (props) => {
+  const handleSubmit = (event) => {
+    props.setOpen(true);
+    event.preventDefault();
+  };
+
   return (
-    <Container
-      className={classes.Form + " d-flex flex-row jusify-content-between"}
-    >
-      <Form.Control
-        autoFocus
-        className={classes.SearchField + " mr-2"}
-        placeholder="Bedrift AS"
-        size="lg"
-      />
-      <Button
-        onClick={() => props.setOpen(true)}
-        // aria-controls="example-collapse-text"
-        // aria-expanded={open}
-        size="lg"
+    <Container className="d-flex justify-content-center">
+      <Form
+        onSubmit={handleSubmit}
+        className={classes.Form + " d-flex flex-row"}
       >
-        Søk
-      </Button>
+        <Form.Control
+          autoFocus
+          className={classes.SearchField + " mr-2"}
+          placeholder="Bedrift AS"
+          size="lg"
+        />
+        <Button type="submit" size="lg">
+          Søk
+        </Button>
+      </Form>
     </Container>
   );
 };

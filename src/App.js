@@ -5,7 +5,7 @@ import SearchForm from "./components/SearchForm/SearchForm";
 import "./stylesheets/styles.scss";
 
 const App = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="Layout">
