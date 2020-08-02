@@ -10,7 +10,7 @@ const App = () => {
 
   return (
     <Container>
-      <SearchForm />
+      <SearchForm setOpen={() => setOpen(!open)} />
       <CompanyTable open={open} />
     </Container>
   );

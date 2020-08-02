@@ -11,7 +11,7 @@ const SearchForm = (props) => {
     >
       <Form.Control className="mr-2" placeholder="Bedrift AS" size="lg" />
       <Button
-        // onClick={() => setOpen(!open)}
+        onClick={() => props.setOpen(true)}
         // aria-controls="example-collapse-text"
         // aria-expanded={open}
         size="lg"
