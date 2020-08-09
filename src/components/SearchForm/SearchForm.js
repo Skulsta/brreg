@@ -1,7 +1,5 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/Container";
+import { Button, Form, Container } from "react-bootstrap";
 import classes from "./SearchForm.module.scss";
 
 const SearchForm = (props) => {

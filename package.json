@@ -20,9 +20,14 @@
     "build": "react-scripts build",
     "deploy-production": "react-scripts build && scp -r ./build/* skulsta@164.90.228.10:/var/www/brreg.io/html",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
-  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -37,5 +42,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^5.3.19"
   }
 }
