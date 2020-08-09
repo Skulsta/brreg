@@ -26,7 +26,7 @@ const CompanyTable = (props) => {
               </Row>
             </ListGroup.Item>
             {props.companies ? (
-              props.companies.enheter.slice(0, 7).map((item) => (
+              props.companies.enheter.slice(0, 5).map((item) => (
                 <ListGroup.Item key={item.organisasjonsnummer}>
                   <Row>
                     <Col>{item.navn}</Col>
