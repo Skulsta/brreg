@@ -15,37 +15,41 @@ const CompanyTable = (props) => {
             <ListGroup.Item>
               <Row>
                 <Col>
-                  <p class="font-weight-bold">Navn</p>
+                  <p className="font-weight-bold">Navn</p>
                 </Col>
                 <Col>
-                  <p class="font-weight-bold">Orgnr.</p>
+                  <p className="font-weight-bold">Orgnr.</p>
                 </Col>
                 <Col>
-                  <p class="font-weight-bold">Sted</p>
+                  <p className="font-weight-bold">Sted</p>
                 </Col>
               </Row>
             </ListGroup.Item>
-            <ListGroup.Item>
-              <Row>
-                <Col>Bedrift AS</Col>
-                <Col>871168172</Col>
-                <Col>0552 Oslo</Col>
-              </Row>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Row>
-                <Col>Bedrift AS</Col>
-                <Col>871168172</Col>
-                <Col>0552 Oslo</Col>
-              </Row>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Row>
-                <Col>Bedrift AS</Col>
-                <Col>871168172</Col>
-                <Col>0552 Oslo</Col>
-              </Row>
-            </ListGroup.Item>
+            {props.companies ? (
+              props.companies.enheter.slice(0, 7).map((item) => (
+                <ListGroup.Item key={item.organisasjonsnummer}>
+                  <Row>
+                    <Col>{item.navn}</Col>
+                    <Col>{item.organisasjonsnummer}</Col>
+                    <Col>
+                      {item.forretningsadresse &&
+                      item.forretningsadresse.postnummer &&
+                      item.forretningsadresse.poststed
+                        ? item.forretningsadresse.postnummer +
+                          " " +
+                          item.forretningsadresse.poststed
+                        : " "}
+                    </Col>
+                  </Row>
+                </ListGroup.Item>
+              ))
+            ) : (
+              <ListGroup.Item>
+                <Row>
+                  <Col>Ingen bedrifter matchet søket</Col>
+                </Row>
+              </ListGroup.Item>
+            )}
           </ListGroup>
         </div>
       </Fade>

@@ -5,11 +5,15 @@ import "./App.scss";
 
 const App = () => {
   const [open, setOpen] = useState(false);
+  const [companyData, setCompanyData] = useState({ enheter: [] });
 
   return (
     <div className="Layout">
-      <SearchForm setOpen={() => setOpen(!open)} />
-      <CompanyTable open={open} />
+      <SearchForm
+        setOpen={(result) => setOpen(result)}
+        setCompanyData={(result) => setCompanyData(result)}
+      />
+      <CompanyTable open={open} companies={companyData} />
     </div>
   );
 };
